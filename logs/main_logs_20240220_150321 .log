@@ -1,0 +1,20 @@
+2024-02-20 15:04:31,320:<module>:Executing pipeline..
+
+2024-02-20 15:06:12,211:validate_null:Validating null values
+2024-02-20 15:06:16,855:validate_null:Null validation successful.No empty strings or invalid missing values found.
+
+2024-02-20 15:06:16,855:validate_zipcode:Validating zipcode
+2024-02-20 15:06:18,523:validate_zipcode:Validation successful. All zipcodes are 5 digits.
+
+2024-02-20 15:06:18,523:validate_date_id:Validating Date id column
+2024-02-20 15:06:18,727:validate_date_id:Date Id Validation Successful
+
+2024-02-20 15:06:18,727:validate_hour_id:Validating hour id column
+2024-02-20 15:06:19,036:validate_hour_id:Hour id validation successful
+
+2024-02-20 15:06:19,037:validate_snake_case:Validating snake_case
+2024-02-20 15:06:41,870:validate_snake_case:Snake case validation successful
+
+2024-02-20 15:06:42,507:send_slack_notification:Slack notification sent successfully!
+2024-02-20 15:06:42,593:<module>:Pipeline execution completed.
+
