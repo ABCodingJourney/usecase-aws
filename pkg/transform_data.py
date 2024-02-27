@@ -7,6 +7,9 @@ class DataframeOperations:
     def __init__(self, data) -> None:
         self.data = data
 
+    def display_data(self):
+        print(self.data.head(10))
+
     def standardize(self) -> None:
         """
         All standardizations are applied here
