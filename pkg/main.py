@@ -26,6 +26,7 @@ class ClickstreamLoad:
 
                 # Step 2 - Transformation and Standardizations
                 dfop = DataframeOperations(data_df)
+                dfop.display_data()
                 dfop.standardize()
                 dfop.transformations()
 
