@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from pkg.utils import log
 
 
 class DataframeOperations:
@@ -8,7 +9,7 @@ class DataframeOperations:
         self.data = data
 
     def display_data(self):
-        print(self.data.head(10))
+        log.info(self.data.head(10))
 
     def standardize(self) -> None:
         """
