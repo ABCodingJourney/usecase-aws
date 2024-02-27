@@ -9,16 +9,14 @@
 
 # File names for mapping
 
-col_file = "/home/ec2-user/UsecasePhase1/data/column_headers.tsv"
-data_file = "/home/ec2-user/UsecasePhase1/data/clickstreamdata.tsv"
+col_file = "/home/ec2-user/usecase-aws/data/column_headers.tsv"
+data_file = "/home/ec2-user/usecase-aws/data/clickstreamdata.tsv"
 
 # Json loading variables
 
 json_file_format = "json_file_format"
 json_stage = "my_json_stage"
-clickstream_json_file = (
-    "C:/Users/ananya.bhat/PythonPractice/Phase1_UseCase/data/clickstream.json"
-)
+clickstream_json_file = "/home/ec2-user/usecase-aws/data/clickstream.json"
 
 
 # Table names
