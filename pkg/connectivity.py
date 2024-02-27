@@ -1,6 +1,10 @@
 import snowflake.connector
+import os
 from tenacity import retry, stop_after_attempt, wait_fixed
 from .params import *
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 @retry(wait=wait_fixed(2), stop=stop_after_attempt(3))
@@ -15,11 +19,11 @@ def create_connection():
     """
 
     conn = snowflake.connector.connect(
-        user=user,
-        password=password,
-        account=account_identifier,
-        database=database,
-        schema=schema,
+        user=os.getenv("user"),
+        password=os.getenv("password"),
+        account=os.getenv("account_identifier"),
+        database=os.getenv("database"),
+        schema=os.getenv("schema"),
     )
 
     return conn

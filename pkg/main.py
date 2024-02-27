@@ -17,7 +17,7 @@ class ClickstreamLoad:
 
             extract = ExtractData()  # Step 1 - Extract data
 
-            extract.unzip_data_file(filename, targetfolder)
+            # extract.unzip_data_file(filename, targetfolder)
             data_df = extract.map_col_headers(col_file, data_file)
 
             # If dataframe is not empty proceed further
