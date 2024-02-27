@@ -35,7 +35,7 @@ class ClickstreamLoad:
                     sc
                 )  # Snowflake object takes snowflake connector as parameter
 
-                snowflakeObj.convert_to_json(data_df, clickstream_json_file)
+                # snowflakeObj.convert_to_json(data_df, clickstream_json_file)
                 snowflakeObj.put_to_stage()
                 latest_file = snowflakeObj.get_latest_file()
                 snowflakeObj.delete_from_landing()
