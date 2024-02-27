@@ -4,9 +4,6 @@ import os
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 from pkg.params import *
-from dotenv import load_dotenv
-
-load_dotenv()
 
 
 def send_slack_notification(channel, message):
@@ -22,7 +19,7 @@ def send_slack_notification(channel, message):
         SlackApiError: If there is an error while sending the Slack notification.
 
     """
-    slack_token = os.getenv("slack_token")
+    slack_token = os.environ.get("slack_token")
     client = WebClient(token=slack_token)
 
     try:
