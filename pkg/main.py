@@ -26,30 +26,30 @@ class ClickstreamLoad:
 
                 # Step 2 - Transformation and Standardizations
                 dfop = DataframeOperations(data_df)
-                dfop.display_data()
-                # dfop.standardize()
-                # dfop.transformations()
+                # dfop.display_data()
+                dfop.standardize()
+                dfop.transformations()
 
-                # # Step 3 - Load to snowflake
-                # snowflakeObj = SnowflakeLoad(
-                #     sc
-                # )  # Snowflake object takes snowflake connector as parameter
+                # Step 3 - Load to snowflake
+                snowflakeObj = SnowflakeLoad(
+                    sc
+                )  # Snowflake object takes snowflake connector as parameter
 
-                # snowflakeObj.convert_to_json(data_df, clickstream_json_file)
-                # snowflakeObj.put_to_stage()
-                # latest_file = snowflakeObj.get_latest_file()
-                # snowflakeObj.delete_from_landing()
-                # snowflakeObj.copy_to_landing(latest_file)
-                # rows_inserted = snowflakeObj.insert_to_final()
+                snowflakeObj.convert_to_json(data_df, clickstream_json_file)
+                snowflakeObj.put_to_stage()
+                latest_file = snowflakeObj.get_latest_file()
+                snowflakeObj.delete_from_landing()
+                snowflakeObj.copy_to_landing(latest_file)
+                rows_inserted = snowflakeObj.insert_to_final()
 
-                # # Step 4 - Validate data
-                # val = ValidateData(sc)
+                # Step 4 - Validate data
+                val = ValidateData(sc)
 
-                # val.validate_null()
-                # val.validate_zipcode()
-                # val.validate_date_id()
-                # val.validate_hour_id()
-                # val.validate_snake_case()
+                val.validate_null()
+                val.validate_zipcode()
+                val.validate_date_id()
+                val.validate_hour_id()
+                val.validate_snake_case()
 
                 # Step 5 - Send slack success notification, with {rows_inserted} rows
                 send_slack_notification(
