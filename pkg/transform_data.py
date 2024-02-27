@@ -9,7 +9,11 @@ class DataframeOperations:
         self.data = data
 
     def display_data(self):
-        log.info(self.data.head(10))
+        try:
+            res = self.data.head(10)
+            log.info(res)
+        except Exception as e:
+            log.exception(f"error ocurred: {e}")
 
     def standardize(self) -> None:
         """
